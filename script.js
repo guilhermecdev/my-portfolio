@@ -27,18 +27,20 @@ const experience = [
 ];
 
 const education = [
+  { school:"Universidade Estácio de Sá", course:"Bacharelado em Engenharia de Software", period:"jan. 2024 – fev. 2028" },
   { school:"Universidade Cruzeiro do Sul", course:"CST em Ciência de Dados", period:"jun. 2026 – dez. 2027" },
   { school:"Digital College Brasil", course:"Data Analytics & IA", period:"mai. 2026 – mai. 2027" },
-  { school:"Universidade Estadual do Ceará", course:"Profissionalizante em Ciência de Dados", period:"mar. 2025 – dez. 2025" },
   { school:"Dev Club", course:"Tecnologia da Informação e Comunicação", period:"abr. 2025 – dez. 2025" },
-  { school:"Universidade Estácio de Sá", course:"Bacharelado em Engenharia de Software", period:"jan. 2024 – fev. 2028" },
+  { school:"EEEP Professor Francisco Aristóteles de Sousa", course:"Técnico em Administração", period:"Jan. 2020 – dez. 2022" }
 ];
 
 const certifications = [
-  "Formação Microsoft Power BI Profissional",
-  "SQL para Análise de Dados",
-  "Microsoft Excel",
-  "Copilot na Prática: IA, Prompts e Automação",
+  "Residência em TIC-20 de Ciência de Dados.",
+  "SQL para Análise de Dados.",
+  "Formação Microsoft Power BI Profissional.",
+  "Competências Digitais e Inteligência Artificial.",
+  "Copilot na Prática: IA, Prompts e Automação.",
+  "Microsoft Excel Avançado.",
 ];
 
 const languages = ["Português — nativo","Inglês — básico/intermediário","Espanhol — básico"];

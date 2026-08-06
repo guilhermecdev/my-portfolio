@@ -113,6 +113,27 @@ h3{font-size:24px;margin:0}
 .edu p{margin:0;color:var(--muted);font-size:14px}
 .edu .period{font-size:12px}
 .plain{margin-top:20px;display:grid;gap:12px;color:var(--muted)}
+.h3-row{display:flex;align-items:center;gap:10px}
+.h3-icon{width:20px;height:20px;flex:none;color:var(--primary)}
+#work {
+  scroll-margin-top: 10px;
+}
+
+#experience {
+  scroll-margin-top: 10px;
+}
+
+#about {
+  scroll-margin-top: 120px;
+}
+
+#certifications {
+  scroll-margin-top: 150px;
+}
+
+#contact {
+  scroll-margin-top: 90px;
+}
 
 /* about */
 .about{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--card)}
@@ -159,6 +180,8 @@ h3{font-size:24px;margin:0}
   .three-col{grid-template-columns:repeat(3,1fr)}
   .about-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
 }
+
 /* mobile nav open */
 body.nav-open .nav{display:flex;position:fixed;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--card);border-bottom:1px solid var(--border);padding:8px 24px 20px}
 body.nav-open .nav a{padding:12px 0;border-bottom:1px solid var(--border)}
+
