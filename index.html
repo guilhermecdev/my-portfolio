@@ -1,164 +1,391 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Guilherme Cardozo — Analista de Dados</title>
-<meta name="description" content="Portfólio de Guilherme Cardozo, Analista de Dados Júnior: SQL, Power BI, Excel Avançado, Python (Pandas/NumPy), DAX e modelagem de dados." />
-<meta property="og:title" content="Guilherme Cardozo — Analista de Dados" />
-<meta property="og:description" content="Analista de Dados Júnior em Fortaleza-CE. SQL, Power BI, Excel Avançado, Python, DAX e modelagem de dados." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="assets/og-cover.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="assets/og-cover.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guilherme Cardozo | Portfólio de Análise de Dados</title>
+  <meta name="description" content="Portfólio de Guilherme Cardozo de Andrade — Analista de Dados Júnior com experiência em Power BI, SQL, Excel Avançado e Python." />
+  <meta name="author" content="Guilherme Cardozo de Andrade" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta property="og:title" content="Guilherme Cardozo | Portfólio" />
+  <meta property="og:description" content="Analista de Dados Júnior em transição de carreira, com experiência em Power BI, SQL, Excel Avançado e Python." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<header class="header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">GC.</a>
-    <nav class="nav" id="nav">
-      <a href="#work">Projetos</a>
-      <a href="#experience">Experiência</a>
-      <a href="#certifications">Certificações</a>
-      <a href="#about">Sobre</a>
-      <a href="#contact">Contato</a>
-    </nav>
-    <div class="header-actions">
-      <a class="btn btn-outline btn-sm" href="mailto:guilhermecardozo262@gmail.com">
-        <svg viewBox="0 0 24 24" class="icon"><path d="M4 4h16v16H4z" fill="none"/><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2 .8V18h16V6.8l-8 5-8-5Z"/></svg>
-        <span>Fale comigo</span>
+<body id="top">
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <nav class="container nav" aria-label="Navegação principal">
+      <a href="#top" class="brand">
+        <span class="brand-mark"><span>GC</span></span>
+        Guilherme Cardozo
       </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre" data-nav>Sobre</a></li>
+        <li><a href="#projetos" data-nav>Projetos</a></li>
+        <li><a href="#certificacoes" data-nav>Certificações</a></li>
+        <li><a href="#contato" data-nav>Contato</a></li>
+      </ul>
+
+      <a href="#contato" class="nav-cta"><span class="dot"></span> Em transição para Analista de Dados</a>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-    </div>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#top" data-nav>Início</a>
+    <a href="#sobre" data-nav>Sobre</a>
+    <a href="#projetos" data-nav>Projetos</a>
+    <a href="#certificacoes" data-nav>Certificações</a>
+    <a href="#contato" data-nav>Contato</a>
   </div>
-</header>
 
-<main id="top">
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div class="hero-text reveal">
-        <p class="hello">Olá<span class="accent">.</span></p>
-        <div class="hello-row"><span class="line"></span><p>Eu sou o Guilherme</p></div>
-        <h1>Analista de <span class="accent">Dados</span></h1>
-        <p class="lead">SQL, Power BI, Excel Avançado e Python (Pandas/NumPy). Transformo grandes volumes de dados em dashboards e insights claros para a tomada de decisão.</p>
-        <div class="hero-cta">
-          <a href="#work" class="btn btn-primary">Ver projetos
-            <svg class="icon" viewBox="0 0 24 24"><path d="M12 4v12.2l5-5 1.4 1.4L12 19 5.6 12.6 7 11.2l5 5V4z"/></svg>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero container" id="top">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Portfólio Profissional</span>
+          <div class="badge reveal"><span class="dot"></span> Em transição de carreira para Analista de Dados</div>
+          <h1 class="reveal">Guilherme <span class="accent">Cardozo</span></h1>
+          <p class="tagline reveal">Analista de Dados Júnior</p>
+          <p class="lead reveal">Profissional em transição de carreira para Analista de Dados, com experiência sólida no setor de indústria e alimentos — uma trajetória que trouxe visão estratégica e analítica orientada a processos, qualidade e decisões baseadas em evidências e indicadores de desempenho.</p>
+
+          <div class="btn-row reveal">
+            <a href="#sobre" class="btn btn-primary">Ver Trajetória</a>
+            <a href="#contato" class="btn btn-outline">Entre em Contato</a>
+          </div>
+
+          <div class="stats reveal">
+            <div>
+              <div class="stat-num" data-count="2" data-suffix="+">0</div>
+              <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div>
+              <div class="stat-num" data-count="8" data-suffix="">0</div>
+              <div class="stat-label">Certificações</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap reveal">
+          <div class="hero-photo-ring" aria-hidden="true"></div>
+          <div class="hero-photo">
+            <img src="assets/foto-perfil.jpg" alt="Guilherme Cardozo de Andrade">
+          </div>
+
+          <span class="float-badge" title="SQL"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg></span>
+          <span class="float-badge" title="Power BI"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><rect x="7" y="12" width="3" height="6"></rect><rect x="12" y="8" width="3" height="10"></rect><rect x="17" y="5" width="3" height="13"></rect></svg></span>
+          <span class="float-badge" title="Excel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg></span>
+          <span class="float-badge" title="Python"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5z"></path><path d="M12 22V12M21 7l-9 5-9-5"></path></svg></span>
+          <span class="float-badge" title="Modelagem de Dados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"></circle><circle cx="19" cy="6" r="2.5"></circle><circle cx="12" cy="18" r="2.5"></circle><path d="M7 7.5 10.5 16M17 7.5 13.5 16M7.5 6h9"></path></svg></span>
+          <span class="float-badge" title="IA / Copilot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"></rect><path d="M12 8V4M8 4h8"></path><circle cx="9" cy="14" r="1"></circle><circle cx="15" cy="14" r="1"></circle></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">01 · Sobre mim</span>
+          <h2>Quem está por trás dos dados?</h2>
+        </div>
+
+        <div class="about-text-grid reveal">
+          <p>Experiência com Power BI para criação de dashboards e relatórios, análise de dados e automação de processos, com capacidade de transformar grandes volumes de dados em insights claros.</p>
+          <p>Conhecimento em SQL para extração, manipulação e análise de dados em bancos relacionais, além de familiaridade com Python e bibliotecas como Pandas e NumPy para tratamento, limpeza e exploração de dados.</p>
+        </div>
+
+        <div class="pill-row reveal">
+          <span class="pill">SQL</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Excel Avançado</span>
+          <span class="pill">Python (Pandas, NumPy)</span>
+          <span class="pill">Modelagem &amp; DAX</span>
+          <span class="pill">Microsoft 365 Copilot</span>
+        </div>
+
+        <h4 class="reveal" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-top:1.25rem;margin-bottom:0.75rem;">Idiomas</h4>
+        <div class="pill-row reveal">
+          <span class="pill">Espanhol — básico</span>
+          <span class="pill">Inglês — básico/intermediário</span>
+        </div>
+
+        <div class="timeline-wrap">
+          <h3 class="reveal" style="font-size:1.15rem;margin-bottom:1.75rem;">Trajetória Profissional</h3>
+          <div class="timeline">
+              <div class="timeline-item current reveal">
+                <div class="timeline-role">
+                  <span class="timeline-icon"><img src="assets/logo-mdiasbranco.png" alt="M. Dias Branco"></span>
+                  <span class="timeline-role-text">
+                    <h3 style="display:inline;">M. Dias Branco</h3>
+                    <span class="tag-current">Atual</span>
+                  </span>
+                </div>
+                <div class="timeline-meta">Fortaleza, Ceará · Jan/2024 — Presente (2 anos e 7 meses)</div>
+                <p style="margin-bottom:0.6rem;"><strong style="color:var(--text-primary);">Apontador de Produção</strong> — Jul/2025 — atual (1 ano e 1 mês)<br>
+                <strong style="color:var(--text-primary);">Auxiliar de Produção</strong> — Jan/2024 — Jul/2025 (1 ano e 7 meses)</p>
+                <p>Atuação no acompanhamento de processos produtivos, com foco em qualidade, controle de indicadores de desempenho e apoio à tomada de decisão baseada em dados — base prática que sustenta a transição para uma atuação analítica.</p>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="timeline-role">
+                  <span class="timeline-icon"><img src="assets/logo-l7.png" alt="L7 Transporte e Logística"></span>
+                  <span class="timeline-role-text"><h3>Assistente de Departamento Pessoal</h3></span>
+                </div>
+                <div class="timeline-meta">L7 Transporte e Logística · Aquiraz, Ceará · Ago/2022 — Nov/2022 (4 meses)</div>
+                <p>Apoio em processos administrativos de admissão, demissão e controle de documentos trabalhistas. Cálculo de férias e rescisões, controle de ponto eletrônico e emissão de holerites. Administração de benefícios e atendimento a colaboradores, além de apoio no cumprimento de obrigações acessórias, incluindo envio de informações ao eSocial.</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="edu-section">
+          <div class="edu-head reveal">
+            <div class="edu-head-text">
+              <span class="eyebrow">Formação</span>
+              <h3 class="edu-title">Formação <span class="accent">Acadêmica</span></h3>
+              <span class="edu-title-rule" aria-hidden="true"></span>
+              <p class="edu-head-desc">Minha jornada de aprendizado e desenvolvimento contínuo.</p>
+            </div>
+            <span class="edu-head-visual" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 4 2 9l10 5 10-5Z"></path><path d="M6 11.5V17c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"></path></svg>
+            </span>
+          </div>
+
+          <div class="edu-timeline">
+            <span class="edu-line" aria-hidden="true"><span class="edu-line-fill"></span></span>
+            <article class="edu-card reveal">
+              <span class="edu-node" aria-hidden="true"></span>
+              <span class="edu-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 8-4 4 4 4"></path><path d="m15 8 4 4-4 4"></path></svg></span>
+              <div class="edu-card-body">
+                <h4>Bacharelado em Engenharia de Software</h4>
+                <div class="edu-card-meta">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V10l7-5 7 5v11"></path><path d="M9 21v-6h6v6"></path></svg>Universidade Estácio de Sá</span>
+                  <span class="edu-dot" aria-hidden="true">·</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 11h18"></path></svg>Jan/2024 — Fev/2028</span>
+                </div>
+                <p>Formação sólida em desenvolvimento de software, arquitetura de sistemas, algoritmos e boas práticas de engenharia.</p>
+                
+              </div>
+              <div class="edu-card-side">
+                <span class="edu-status"><span class="dot"></span> Em andamento</span>
+                <span class="edu-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+              </div>
+            </article>
+            <article class="edu-card reveal is-focus">
+              <span class="edu-node" aria-hidden="true"></span>
+              <span class="edu-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"></ellipse><path d="M5 6v12c0 1.66 3.13 3 7 3s7-1.34 7-3V6"></path><path d="M5 12c0 1.66 3.13 3 7 3s7-1.34 7-3"></path></svg></span>
+              <div class="edu-card-body">
+                <h4>Curso Superior de Tecnologia — Ciência de Dados</h4>
+                <div class="edu-card-meta">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V10l7-5 7 5v11"></path><path d="M9 21v-6h6v6"></path></svg>Universidade Cruzeiro do Sul</span>
+                  <span class="edu-dot" aria-hidden="true">·</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 11h18"></path></svg>Ago/2026 — Jun/2028</span>
+                </div>
+                <p>Estudos focados em análise de dados, estatística, machine learning, visualização e tomada de decisão baseada em dados.</p>
+              </div>
+              <div class="edu-card-side">
+                <span class="edu-status"><span class="dot"></span> Em andamento</span>
+                <span class="edu-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+              </div>
+            </article>
+            <article class="edu-card reveal">
+              <span class="edu-node" aria-hidden="true"></span>
+              <span class="edu-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"></path><path d="m7 15 3.5-4 3 2.5L18 8"></path></svg></span>
+              <div class="edu-card-body">
+                <h4>Formação Profissionalizante — Data Analytics &amp; IA</h4>
+                <div class="edu-card-meta">
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V10l7-5 7 5v11"></path><path d="M9 21v-6h6v6"></path></svg>Digital College Brasil</span>
+                  <span class="edu-dot" aria-hidden="true">·</span>
+                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 11h18"></path></svg>Mai/2026 — Mai/2027</span>
+                </div>
+                <p>Formação prática em análise de dados, SQL, Power BI, Python, estatística aplicada e soluções com IA.</p>
+                
+              </div>
+              <div class="edu-card-side">
+                <span class="edu-status"><span class="dot"></span> Em andamento</span>
+                <span class="edu-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="edu-footer reveal">
+            <span class="edu-footer-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1 2-1 4-1 4s2 0 4-1"></path><path d="M12 3c4 1 7 4 8 8-1 5-5 9-10 10l-3-3C8 13 10 7 12 3Z"></path><circle cx="14" cy="10" r="1.6"></circle></svg>
+            </span>
+            <div>
+              <h4>Aprendizado contínuo é o que <span class="accent">me move</span>.</h4>
+              <p>Sempre em busca de novos conhecimentos e desafios.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">02 · Projetos</span>
+          <h2>O que estou construindo</h2>
+          <p>Projetos práticos de análise de dados estão a caminho — em breve, novidades por aqui.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <span class="cert-thumb" style="margin:-1.75rem -1.75rem 1.25rem;border-radius:22px 22px 0 0;"><img src="assets/projeto-em-desenvolvimento.jpg" alt="Projeto em desenvolvimento" style="width:100%;height:100%;object-fit:cover;"></span>
+            <h3>Projeto em Desenvolvimento</h3>
+            <p>Novo projeto de análise de dados em construção. Em breve, detalhes completos por aqui.</p>
+            <span class="tag" style="align-self:flex-start;">Em breve</span>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="cert-thumb" style="margin:-1.75rem -1.75rem 1.25rem;border-radius:22px 22px 0 0;"><img src="assets/projeto-em-desenvolvimento.jpg" alt="Projeto em desenvolvimento" style="width:100%;height:100%;object-fit:cover;"></span>
+            <h3>Projeto em Desenvolvimento</h3>
+            <p>Novo projeto de análise de dados em construção. Em breve, detalhes completos por aqui.</p>
+            <span class="tag" style="align-self:flex-start;">Em breve</span>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="cert-thumb" style="margin:-1.75rem -1.75rem 1.25rem;border-radius:22px 22px 0 0;"><img src="assets/projeto-em-desenvolvimento.jpg" alt="Projeto em desenvolvimento" style="width:100%;height:100%;object-fit:cover;"></span>
+            <h3>Projeto em Desenvolvimento</h3>
+            <p>Novo projeto de análise de dados em construção. Em breve, detalhes completos por aqui.</p>
+            <span class="tag" style="align-self:flex-start;">Em breve</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificações -->
+    <section class="section section-alt" id="certificacoes">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">03 · Certificações</span>
+          <h2>Aprendizado contínuo</h2>
+          <p>Cursos e certificações complementares em análise de dados, BI e IA aplicada.</p>
+        </div>
+
+        <div class="cert-grid" id="cert-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">04 · Contato</span>
+          <h2>Vamos conversar?</h2>
+          <p>Aberto a oportunidades como Analista de Dados Júnior. Mande uma mensagem pelo LinkedIn!</p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="https://wa.me/5585991031844" target="_blank" rel="noopener noreferrer" class="contact-card large reveal">
+            <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+            <span class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 3.4z"></path></svg></span>
+            <div><h4>WhatsApp</h4><p>(85) 99103-1844</p></div>
           </a>
-          <a href="#contact" class="btn btn-ghost">Entre em contato</a>
-          <a href="assets/curriculo-guilherme-cardozo.pdf" download class="btn btn-outline">Baixar currículo
-            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L10 13.2V3h2Zm-8 16h16v2H4v-2Z"/></svg>
+
+          <a href="https://www.linkedin.com/in/guilhermecardozodev" target="_blank" rel="noopener noreferrer" class="contact-card large reveal">
+            <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+            <span class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></span>
+            <div><h4>LinkedIn</h4><p>linkedin.com/in/guilhermecardozodev</p></div>
           </a>
-        </div>
-        <ul class="hero-meta">
-          <li><svg class="icon accent-fill" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg> Fortaleza, CE</li>
-          <li><a href="tel:+5585991031844"><svg class="icon accent-fill" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.5.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.57 3.5a1 1 0 0 1-.25 1l-2.2 2.3Z"/></svg> (85) 99103-1844</a></li>
-          <li><a href="https://linkedin.com/in/guilhermecardozodev" target="_blank" rel="noreferrer"><svg class="icon accent-fill" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05A4.2 4.2 0 0 1 17.6 8.7c3 0 3.4 1.9 3.4 4.6V21h-4v-6.3c0-1.5-.3-2.6-1.8-2.6-1.4 0-1.9 1-1.9 2.5V21h-3.9V9Z"/></svg> /guilhermecardozodev</a></li>
-        </ul>
-      </div>
-      <div class="hero-visual reveal">
-        <div class="glow" aria-hidden="true"></div>
-        <div class="ring" aria-hidden="true"></div>
-        <div class="photo"><img src="assets/guilherme-profile.jpg" alt="Guilherme Cardozo" width="1024" height="1024" /></div>
-        <svg class="chev chev-left" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-        <svg class="chev chev-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </div>
-    </div>
-    <div class="tech-strip">
-      <ul class="container"><li>SQL</li><li>Power BI</li><li>Excel</li><li>Python</li><li>Pandas</li><li>DAX</li></ul>
-    </div>
-  </section>
 
-  <!-- PROJETOS -->
-  <section id="work" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Portfólio</p>
-          <h2>Projetos e competências</h2>
-        </div>
-        <p class="section-sub">Aplicações práticas das minhas competências técnicas em análise de dados, visualização e automação de processos.</p>
-      </div>
-      <div class="projects" id="projects"></div>
-      <div class="skills-block">
-        <h3>Competências técnicas</h3>
-        <div class="chips" id="skills"></div>
-      </div>
-    </div>
-  </section>
+          <div class="contact-grid-small">
+            <a href="mailto:guilhermecardozo262@gmail.com" class="contact-card small reveal">
+              <span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+              <span class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6z"></path><path d="m22 6-10 7L2 6"></path></svg></span>
+              <div><h4>E-mail</h4><p style="font-size:0.85rem;">guilhermecardozo262@gmail.com</p></div>
+            </a>
 
-  <!-- EXPERIÊNCIA -->
-  <section id="experience" class="section bordered">
-    <div class="container">
-      <p class="eyebrow">Trajetória</p>
-      <h2>Experiência profissional</h2>
-      <div class="jobs" id="jobs"></div>
-      <div class="three-col">
-        <div>
-          <h3 class="h3-row"><svg class="h3-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5-10-5Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg>Formação</h3>
-          <ul class="edu" id="education"></ul>
+            <a href="https://github.com/guilhermecdev" target="_blank" rel="noopener noreferrer" class="contact-card small reveal">
+              <span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+              <span class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></span>
+              <div><h4>GitHub</h4><p style="font-size:0.85rem;">github.com/guilhermecdev</p></div>
+            </a>
+          </div>
         </div>
-        <div id="certifications">
-          <h3 class="h3-row"><svg class="h3-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M9 12.5 7 21l5-3 5 3-2-8.5"/></svg>Certificações</h3>
-          <ul class="plain" id="certs"></ul>
-        </div>
-        <div>
-          <h3 class="h3-row"><svg class="h3-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9Z"/></svg>Idiomas</h3>
-          <ul class="plain" id="langs"></ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SOBRE -->
-  <section id="about" class="section about">
-    <div class="container about-grid">
-      <div>
-        <p class="eyebrow">Sobre mim</p>
-        <h2>Monitoramento sistêmico de processos: onde nasce minha relação técnica com dados</h2>
+        <p class="contact-footnote reveal">Respondo em até <strong>24 horas</strong>.</p>
       </div>
-      <div class="about-text">
-        <p>Estou em transição de carreira para Analista de Dados, com experiência sólida no setor de indústria e alimentos. Essa trajetória me deu uma visão estratégica e analítica orientada a processos, qualidade e indicadores de desempenho.</p>
-        <p>Trabalho com Power BI na criação de dashboards e relatórios, SQL para extração e análise em bancos relacionais, Excel Avançado para automação e Python (Pandas/NumPy) para tratamento e exploração de dados.</p>
-        <div class="stats">
-          <div><p class="stat">2+</p><p>Anos na indústria com indicadores</p></div>
-          <div><p class="stat">8</p><p>Certificações concluídas</p></div>
-          <div><p class="stat">5</p><p>Formações em dados e tecnologia</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- CONTATO -->
-  <footer id="contact" class="section footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <h2 class="footer-title">Vamos conversar sobre dados?</h2>
-        <div class="footer-contact">
-          <p>Estou aberto a oportunidades como Analista de Dados Júnior e a projetos de análise, dashboards e automação. Entre em contato.</p>
-          <a class="mail" href="mailto:guilhermecardozo262@gmail.com">guilhermecardozo262@gmail.com</a>
-          <a class="phone" href="tel:+5585991031844">(85) 99103-1844</a>
-          <a class="phone" href="assets/curriculo-guilherme-cardozo.pdf" download>Baixar currículo (PDF)</a>
+        <div class="footer-brand">
+          <a href="#top" class="brand"><span class="brand-mark"><span>GC</span></span> Guilherme Cardozo</a>
+          <p>Analista de Dados Júnior.<br>Em transição de carreira para dados.</p>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="year"></span> Guilherme Cardozo. Todos os direitos reservados.</p>
+
         <div>
-          <a href="https://linkedin.com/in/guilhermecardozodev" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:guilhermecardozo262@gmail.com">E-mail</a>
+          <h3 class="footer-heading">Navegação</h3>
+          <nav class="footer-nav" aria-label="Navegação do rodapé">
+            <a href="#top">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#certificacoes">Certificações</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Redes</h3>
+          <div class="footer-socials">
+            <a href="https://github.com/guilhermecdev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+            <a href="https://www.linkedin.com/in/guilhermecardozodev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          </div>
         </div>
       </div>
+
+      <div class="footer-bottom">© 2026 Guilherme Cardozo</div>
     </div>
   </footer>
-</main>
-<script src="script.js"></script>
+
+  <button class="back-top" id="back-top" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15 12 9 6 15"></path></svg>
+  </button>
+
+  <div class="cert-modal-overlay" id="cert-modal-overlay">
+    <div class="cert-modal">
+      <div class="cert-modal-image" id="cert-modal-image">
+        <span class="cert-modal-visual" id="cert-modal-visual">
+          <span class="cert-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><circle cx="12" cy="11" r="3"></circle><path d="M8 21h8M9 18l-1 3M15 18l1 3"></path></svg></span>
+        </span>
+        <button class="cert-modal-close" id="cert-modal-close" aria-label="Fechar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="cert-modal-body">
+        <h3 id="cert-modal-title">—</h3>
+        <p id="cert-modal-meta">Envie a imagem deste certificado para eu exibir aqui.</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
 </body>
 </html>

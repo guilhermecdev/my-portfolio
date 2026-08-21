@@ -1,102 +1,237 @@
-// ----- Dados do portfólio -----
-const projects = [
-  { id:"powerbi", title:"Dashboards de Performance", category:"Power BI", description:"Painéis de indicadores de produção e qualidade com modelagem de dados, relacionamentos e medidas em DAX.", image:"assets/proj-powerbi.jpg" },
-  { id:"sql", title:"Extração e Análise em SQL", category:"SQL", description:"Consultas com JOINs, agregações e window functions para extrair, tratar e analisar dados em bancos relacionais.", image:"assets/proj-sql.jpg" },
-  { id:"excel", title:"Automação de Planilhas", category:"Excel Avançado", description:"Relatórios com fórmulas avançadas, tabelas dinâmicas e automação de rotinas para reduzir trabalho manual e erros.", image:"assets/proj-excel.jpg" },
-  { id:"python", title:"Exploração de Dados com Python", category:"Python", description:"Limpeza, tratamento e análise exploratória de dados com Pandas e NumPy, transformando volumes brutos em insights claros.", image:"assets/proj-python.jpg" },
-  { id:"dax", title:"Modelagem e Medidas DAX", category:"DAX", description:"Criação de medidas calculadas, colunas e modelagem dimensional para relatórios interativos e de alto desempenho.", image:"assets/proj-powerbi.jpg" },
-  { id:"kpi", title:"Indicadores de Produção", category:"KPIs", description:"Acompanhamento de metas diárias, eficiência, qualidade e OEE com visualizações focadas em operação industrial.", image:"assets/proj-sql.jpg" },
-];
+// ============================================================
+// Guilherme Cardozo — Portfólio | script.js
+// ============================================================
 
-const skills = [
-  "SQL — JOINs, agregações e window functions",
-  "Power BI — dashboards, relatórios e modelagem",
-  "Excel Avançado — fórmulas, tabelas dinâmicas e automação",
-  "Python — Pandas e NumPy",
-  "Modelagem, Relacionamentos e DAX",
-  "IA aplicada — Microsoft 365 Copilot",
-];
+(function () {
 
-const experience = [
-  { company:"M. Dias Branco", period:"jan. 2024 – atual", location:"Fortaleza, CE",
-    roles:["Apontador de Produção — jul. 2025 – atual","Auxiliar de Produção — jan. 2024 – jul. 2025"],
-    description:"Acompanhamento de processos produtivos com foco em qualidade, controle de indicadores de desempenho e apoio à tomada de decisão baseada em dados." },
-  { company:"L7 Transporte e Logística", period:"ago. 2022 – nov. 2022", location:"Aquiraz, CE",
-    roles:["Assistente de Departamento Pessoal"],
-    description:"Processos de admissão e demissão, cálculo de férias e rescisões, controle de ponto eletrônico, benefícios e envio de informações ao eSocial." },
-];
+  /* ---------- Tema claro/escuro ---------- */
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  const savedTheme = localStorage.getItem('gc-theme');
+  if (savedTheme === 'light') root.setAttribute('data-theme', 'light');
 
-const education = [
-  { school:"Universidade Estácio de Sá", course:"Bacharelado em Engenharia de Software", period:"jan. 2024 – fev. 2028" },
-  { school:"Universidade Cruzeiro do Sul", course:"CST em Ciência de Dados", period:"jun. 2026 – dez. 2027" },
-  { school:"Digital College Brasil", course:"Data Analytics & IA", period:"mai. 2026 – mai. 2027" },
-  { school:"Dev Club", course:"Tecnologia da Informação e Comunicação", period:"abr. 2025 – dez. 2025" },
-  { school:"EEEP Professor Francisco Aristóteles de Sousa", course:"Técnico em Administração", period:"Jan. 2020 – dez. 2022" }
-];
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isLight = root.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('gc-theme', 'dark');
+      } else {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('gc-theme', 'light');
+      }
+    });
+  }
 
-const certifications = [
-  "Residência em TIC-20 de Ciência de Dados.",
-  "SQL para Análise de Dados.",
-  "Formação Microsoft Power BI Profissional.",
-  "Competências Digitais e Inteligência Artificial.",
-  "Copilot na Prática: IA, Prompts e Automação.",
-  "Microsoft Excel Avançado.",
-];
+  /* ---------- Certificados ---------- */
+  const certificates = [
+    { title: 'Residência em TIC-20 de Ciência de Dados', org: 'Capacita Brasil / C-Jovem · UECE', image: 'assets/cert-tic20.jpg' },
+    { title: 'SQL Para Análise de Dados', org: 'Infinity Big Data', image: 'assets/cert-sql-infinity.jpg' },
+    { title: 'SQL — Dataclub', org: 'DevClub', image: 'assets/cert-sql-dataclub.jpg' },
+    { title: 'Formação Microsoft Power BI Profissional', org: 'Udemy', image: 'assets/cert-powerbi-udemy.jpg' },
+    { title: 'Power BI', org: 'Santander Open Academy', image: 'assets/cert-powerbi-santander.jpg' },
+    { title: 'Competências Digitais e Inteligência Artificial', org: 'Universidade Cruzeiro do Sul', image: 'assets/cert-ia.jpg' },
+    { title: 'Copilot na Prática: IA, Prompts e Automação', org: 'Universidade Corporativa', image: 'assets/cert-copilot.jpg' },
+    { title: 'Curso de Excel Completo', org: 'Danki Code', image: 'assets/cert-excel.jpg' },
+  ];
 
-const languages = ["Português — nativo","Inglês — básico/intermediário","Espanhol — básico"];
+  const certGrid = document.getElementById('cert-grid');
+  const certModalOverlay = document.getElementById('cert-modal-overlay');
+  const certModalVisual = document.getElementById('cert-modal-visual');
+  const certModalTitle = document.getElementById('cert-modal-title');
+  const certModalMeta = document.getElementById('cert-modal-meta');
+  const certModalClose = document.getElementById('cert-modal-close');
 
-// ----- Render -----
-const arrowSvg = '<span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 17.6 16.6 8H9V6h10v10h-2V9.4L7.4 19 6 17.6z"/></svg></span>';
+  const certPlaceholderIcon = `<span class="cert-thumb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><circle cx="12" cy="11" r="3"></circle><path d="M8 21h8M9 18l-1 3M15 18l1 3"></path></svg></span>`;
 
-document.getElementById("projects").innerHTML = projects.map(p => `
-  <article class="project">
-    <div class="project-img"><img src="${p.image}" alt="${p.title}" loading="lazy" width="768" height="576" /></div>
-    <div class="project-body">
-      <div class="project-top">
-        <div>
-          <p class="project-cat">${p.category}</p>
-          <h3>${p.title}</h3>
-        </div>
-        ${arrowSvg}
-      </div>
-      <p class="project-desc">${p.description}</p>
-    </div>
-  </article>`).join("");
+  function openCertModal(cert) {
+    certModalTitle.textContent = cert.title;
+    if (cert.image) {
+      certModalVisual.innerHTML = `<img src="${cert.image}" alt="${cert.title}">`;
+      certModalMeta.textContent = cert.org || '';
+    } else {
+      certModalVisual.innerHTML = certPlaceholderIcon;
+      certModalMeta.textContent = 'Envie a imagem deste certificado para eu exibir aqui.';
+    }
+    certModalOverlay.classList.add('open');
+  }
 
-document.getElementById("skills").innerHTML = skills.map(s => `<span>${s}</span>`).join("");
+  function closeCertModal() {
+    certModalOverlay.classList.remove('open');
+  }
 
-document.getElementById("jobs").innerHTML = experience.map(j => `
-  <article class="job">
-    <div class="job-head">
-      <h3>${j.company}</h3>
-      <p class="job-period">${j.period} • ${j.location}</p>
-    </div>
-    <div class="job-roles">${j.roles.map(r => `<span>${r}</span>`).join("")}</div>
-    <p class="job-desc">${j.description}</p>
-  </article>`).join("");
+  if (certModalClose) certModalClose.addEventListener('click', closeCertModal);
+  if (certModalOverlay) {
+    certModalOverlay.addEventListener('click', (e) => {
+      if (e.target === certModalOverlay) closeCertModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCertModal();
+  });
 
-document.getElementById("education").innerHTML = education.map(e => `
-  <li><strong>${e.course}</strong><p>${e.school}</p><p class="period">${e.period}</p></li>`).join("");
+  if (certGrid) {
+    certificates.forEach(cert => {
+      const card = document.createElement('button');
+      card.className = 'cert-card reveal';
+      card.type = 'button';
+      card.innerHTML = `
+        <span class="cert-thumb">${cert.image ? `<img src="${cert.image}" alt="${cert.title}">` : certPlaceholderIcon}</span>
+        <span class="cert-body">
+          <h4>${cert.title}</h4>
+          <span class="cert-meta">${cert.org || 'Clique para visualizar'}</span>
+        </span>
+      `;
+      card.addEventListener('click', () => openCertModal(cert));
+      certGrid.appendChild(card);
+    });
+  }
 
-document.getElementById("certs").innerHTML = certifications.map(c => `<li>${c}</li>`).join("");
-document.getElementById("langs").innerHTML = languages.map(l => `<li>${l}</li>`).join("");
-document.getElementById("year").textContent = new Date().getFullYear();
+  /* ---------- Header: fundo ao rolar ---------- */
+  const header = document.getElementById('site-header');
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+    backTop.classList.toggle('show', window.scrollY > 600);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-// ----- Menu mobile -----
-const menuBtn = document.getElementById("menuBtn");
-menuBtn.addEventListener("click", () => {
-  const open = document.body.classList.toggle("nav-open");
-  menuBtn.setAttribute("aria-expanded", String(open));
-});
-document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click", () => {
-  document.body.classList.remove("nav-open");
-  menuBtn.setAttribute("aria-expanded","false");
-}));
+  /* ---------- Menu mobile ---------- */
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
 
-// ----- Animação de entrada -----
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
-}, { threshold: .15 });
-document.querySelectorAll(".reveal, .project, .job, .skills-block, .about-text, .footer-contact").forEach(el => {
-  el.classList.add("reveal"); io.observe(el);
-});
+  /* ---------- Voltar ao topo ---------- */
+  const backTop = document.getElementById('back-top');
+  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ---------- Link ativo na navegação ---------- */
+  const navLinks = document.querySelectorAll('[data-nav]');
+  const sections = ['sobre', 'projetos', 'certificacoes', 'contato']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+
+  sections.forEach(s => navObserver.observe(s));
+
+  /* ---------- Reveal ao rolar ---------- */
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => revealObserver.observe(el));
+
+  /* ---------- Contadores animados ---------- */
+  const counters = document.querySelectorAll('.stat-num');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400;
+      const start = performance.now();
+
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(el => counterObserver.observe(el));
+
+  /* ---------- Fundo animado (partículas sutis) ---------- */
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const count = Math.min(60, Math.floor((canvas.width * canvas.height) / 28000));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      r: Math.random() * 1.4 + 0.6,
+    }));
+  }
+
+  function drawFrame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(96, 165, 250, 0.45)';
+      ctx.fill();
+    });
+
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const a = particles[i], b = particles[j];
+        const dist = Math.hypot(a.x - b.x, a.y - b.y);
+        if (dist < 120) {
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(37, 99, 235, ${0.12 * (1 - dist / 120)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+    if (!prefersReducedMotion) requestAnimationFrame(drawFrame);
+  }
+
+  resizeCanvas();
+  drawFrame();
+  window.addEventListener('resize', resizeCanvas);
+
+  onScroll();
+
+  /* ---------- Timeline de formação: revela a linha ---------- */
+  const timeline = document.querySelector('.edu-timeline');
+  if (timeline) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    obs.observe(timeline);
+  }
+})();
